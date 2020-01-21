@@ -1,0 +1,40 @@
+<style>
+p {
+text-align: left;
+color: #000000;
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>
+
+<script>
+    $(document).ready(function(){
+        $("#login").click(function(){
+            window.location.href = "/login.html";
+        });
+    });
+    </script>
+
+
+<button id="login" class="btn.dark">LOG IN</button>
+
+<h1 style="text-align: center;"><span style="color: #ff0000;">README</span></h1>
+<p class="left"> e-mail: igor.morozov705@gmail.com</p>
+<p>Author: Igor Morozov, ID 332562123.</p>
+<p>Exercise #3 "<span style="color: #000000;">Website/Servlets".</span></p>
+<p>&nbsp;</p>
+<p><span style="color: #000000;">This program includes servlets: "LoginServlet", "Chat",&nbsp;</span></p>
+<p><span style="color: #000000;">"MessageResponse", "SecurityCheck" and "Welcome".</span></p>
+<p>&nbsp;</p>
+<p><span style="color: #000000;"> "<span style="background-color: #ffff00;">LoginServlet</span>": includes page "login.html" - first page of this web-application. It requires input name of user, saves it in a session and redirects to servlet "Chat".</span></p>
+<p><span style="color: #000000;">In case of empty input of name the servlet reports "Missing name" and returns to "login.html".</span></p>
+<p><span style="color: #000000;">"<span style="background-color: #ffff00;">Chat</span>": this servlet includes page "chat.html",&nbsp; get the name of&nbsp; the user from a session in order to welcome him. In the method "doPost" the servlet add new message to string of previous messages and saves it in&nbsp;ServletContext.</span></p>
+<p><span style="color: #000000;">"<span style="background-color: #ffff00;">SecurityCheck</span>": checks if name of user is existing in a session. In case if yes - allowed for user&nbsp; is "null" in session&nbsp; - returns him to "login.html.</span></p>
+<p><span style="color: #000000;">"<span style="background-color: #ffff00;">MessageResponse</span>": returns from&nbsp;ServletContext to "chat.html" a string with previous messages. it is called from "chat.html"</span></p>
+<p><span style="color: #000000;">"<span style="background-color: #ffff00;">Welcome</span>" : this servlet is called from "chat.html" and prints string "Welcome&nbsp; " and name of connected user. This name this servlet takes from session.</span></p>
+<p><span style="color: #000000;">Also this web-application includes next html-pages: "login", "chat", "readme" and&nbsp; 2 pages "login1" and "login2" that construct screen with message 'Missing name" (in case if user did not input his name).</span></p>
+
+
+<p style="text-align: left;"><span style="color: #000000;">Configuration:&nbsp;</span></p>
+<img src="configuration.png" alt="configuration">
+<img src="configuration2.png" alt="configuration2">
